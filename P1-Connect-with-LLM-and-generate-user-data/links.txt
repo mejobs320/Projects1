@@ -1,0 +1,36 @@
+c:\users\dell\appdata\local\programs\python\python313\lib\site-packages
+C:\Users\dell\AppData\Local\Programs\Python\Python313\python.exe
+
+
+create user and update about users in this project. no vector or chunks created. used simple llm  gemini-2.5-flash
+
+SYSTEM_MESSAGE = (
+    "You are DataGen, a helpful assistant that generates sample data for applications. "
+    "To generate users, you need: first_names (list), last_names (list), domains (list), min_age, max_age. "
+    "Fill in these values yourself without asking for them "
+    "When asked to save users, first generate them with the tool, then immediately use write_json with the result. "
+    "If the user refers to 'those users' from a previous request, ask them to specify the details again."
+)
+
+
+
+
+Project is working fine but cannot run due to open api key have no credits   ---- not working
+
+model="gemini-2.5-flash"
+API key for AI google studio:  working fine with this api  --------------------------------
+Mail: tradeplus320@gmail.com
+https://aistudio.google.com/api-keys?project=gen-lang-client-0365361683
+Demoapikeygogle
+Project name: projects/115758955319
+Project number: 115758955319
+
+
+APIkey:  not tested
+https://openrouter.ai/
+tradelinks141@gmail.com
+name: OpenrouterAPIKey
+
+
+
+

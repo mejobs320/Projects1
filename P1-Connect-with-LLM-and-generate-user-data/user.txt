@@ -1,0 +1,52 @@
+{
+  "generate_sample_users_response": {
+    "count": 5,
+    "users": [
+      {
+        "registeredAt": "2025-08-22T23:24:13.939404",
+        "lastName": "Smith",
+        "age": 35,
+        "firstName": "Alice",
+        "username": "alice283",
+        "email": "alice.smith@example.com",
+        "id": 1
+      },
+      {
+        "firstName": "Bob",
+        "age": 33,
+        "email": "bob.johnson@test.org",
+        "id": 2,
+        "username": "bob374",
+        "lastName": "Johnson",
+        "registeredAt": "2026-02-09T23:24:13.939414"
+      },
+      {
+        "lastName": "Williams",
+        "registeredAt": "2026-05-22T23:24:13.939420",
+        "firstName": "Charlie",
+        "age": 33,
+        "email": "charlie.williams@example.com",
+        "id": 3,
+        "username": "charlie202"
+      },
+      {
+        "registeredAt": "2025-06-04T23:24:13.939424",
+        "lastName": "Brown",
+        "username": "diana251",
+        "email": "diana.brown@test.org",
+        "id": 4,
+        "age": 26,
+        "firstName": "Diana"
+      },
+      {
+        "registeredAt": "2026-03-08T23:24:13.939428",
+        "lastName": "Jones",
+        "username": "eve153",
+        "email": "eve.jones@example.com",
+        "id": 5,
+        "age": 33,
+        "firstName": "Eve"
+      }
+    ]
+  }
+}
