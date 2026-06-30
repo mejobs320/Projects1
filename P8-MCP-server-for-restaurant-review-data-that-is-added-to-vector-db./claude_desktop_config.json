@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "restaurant-review": {
+      "command": "C:\\MY Docs --\\projects python\\VScode projects\\Python projects\\mcp\\venv\\Scripts\\python.exe",
+      "args": [
+        "C:\\MY Docs --\\projects python\\VScode projects\\Python projects\\mcp\\mcp_server.py"
+      ],
+      "env": {},
+      "cwd": "C:\\MY Docs --\\projects python\\VScode projects\\Python projects\\mcp"
+    }
+  },
+  "preferences": {
+    "remoteToolsDeviceName": "desktop-l1i1klp",
+    "coworkWebSearchEnabled": true,
+    "coworkScheduledTasksEnabled": false,
+    "ccdScheduledTasksEnabled": false,
+    "bypassPermissionsGateByAccount": {
+      "25d80734-1b42-41da-bfc6-e46af0b75b07": false
+    },
+    "epitaxyPrefs": {
+      "starred-local-code-sessions": [],
+      "starred-cowork-spaces": [],
+      "starred-session-groups": [],
+      "dframe-local-slice": {
+        "pinnedOrder": [],
+        "customGroupAssignments": {},
+        "customGroupOrder": {}
+      }
+    }
+  },
+  "coworkUserFilesPath": "C:\\Users\\dell\\Claude"
+}

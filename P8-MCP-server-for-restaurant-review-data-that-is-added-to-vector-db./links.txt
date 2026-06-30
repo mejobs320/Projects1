@@ -1,0 +1,188 @@
+web c:\users\dell\appdata\local\programs\python\python313\lib\site-packages
+C:\Users\dell\AppData\Local\Programs\Python\Python313\python.exe
+
+
+
+run ollama locally
+
+
+
+Prompt:
+
+1)
+uptill now Old program created as below.  Programs are shared in main.py, memory.py and vector.py
+Created program RAG pipeline created to load restaurant review data using chroma db (code already shared in vector.py)
+Created persistent memory to store prompts and responses --  memory.py
+logic is that we will ask for restaurant review queries which will be first looked into RAG pipeline where doc is provided -- vector.py
+Then looked into google search    - main.py
+Then provide response
+Webui is created using streamlit - main.py
+run ollama locally
+
+2)
+Now new requirement is to create MCP server for all above. MCP server will be access by cloud desktop and can see context data for restaurant review data form vector db sqllite, and google search from  tavily web search
+MCP server should expose these functions. 
+realistic_restaurant_reviews data from xls 
+sqllite contain data from realistic_restaurant_reviews.csv which contain columns as Title,Date,Rating,Review. so all can be view using read access only from RAG. expose these functions patterns to know reviews of various restaurant, tehre rating, title and date.
+Need to test locally
+We will first test with stdio(standard inout/output)  and then with SSE (STTP)
+
+
+
+########################################
+
+
+Run
+
+1)
+
+commands to create virtual env:
+virtual env commands: (environment name is env)
+python -m venv venv
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\venv\Scripts\Activate
+(env) PS C:\Users\dell\OneDrive\Desktop\Python projects\ollama>
+
+pip install -r requirements.txt
+
+# 3. Test tools first
+python test_mcp.py
+
+# 4. If test passes, run MCP server
+python mcp_server.py
+
+
+question
+how many veg restaurant are there in india
+best restaurants and reviews
+
+
+######################################################
+
+Full flow in simple terms:
+
+Claude Desktop connects
+        ↓
+calls list_tools()  →  gets list of 7 tools
+        ↓
+You ask a question
+        ↓
+Claude picks tool e.g. "rag_search"
+        ↓
+calls call_tool("rag_search", {"query": "pizza"})
+        ↓
+routes to tool_rag_search("pizza")
+        ↓
+queries ChromaDB → returns results
+        ↓
+Claude Desktop shows answer
+
+
+
+######################################################
+
+
+Yes! Once Claude Desktop is connected to your MCP server, it can do all of this naturally just by you asking in plain English:
+From restaurant review data (SQLite + ChromaDB):
+Show me all 5 star reviews
+What is the average rating of the restaurant?
+Search reviews about pizza quality
+How many negative reviews are there?
+Show me reviews from 2024
+What do customers say about the service?
+Find reviews mentioning price or value
+Show me the worst rated reviews
+
+From web search (Tavily):
+What are the best pizza restaurants in the world?
+Latest news about food industry
+What is the capital of France?
+Best pasta recipes 2025
+
+From conversation history (SQLite memory):
+Show me my recent conversations
+What did I ask yesterday?
+
+Combined questions:
+Compare our restaurant reviews with what people say online about pizza restaurants
+Our average rating is X — how does that compare to industry standards?
+
+
+
+
+#####################################################
+
+
+
+
+
+Demo code to load file is shared
+Running locally using ollama (model = OllamaLLM(model="llama3.2"))
+Install required libraries
+model mxbai-embed-large and llama3.2 is already loaded with ollama installed
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+details and commands:
+
+run ollama on packages donwload ollama and below 2 llm'
+ollama pull llama3.2  (LLM)
+ollama pull mxbai-embed-large (embeddings)
+project create restaurant review with using llm from ollama locally. no key required
+download and run.
+add vector database using chroma db in vector.py program
+it create chroma db
+
+It create venv environment and install requirement.txt
+given restaurant review csv data and llm answer using that
+
+
+
+
+
+
+run programs:
+python main.py
+query database:
+python query_db.py
+
+
+in command prompt:
+ollama pull llama3.2
+ollama pull mxbai-embed-large
+ollama list 
+
+
+
+pip install ollama
+
+Make sure Ollama is running:
+ollama serve
+
+kill ollama:
+askkill /F /IM ollama.exe
+
+
+
+
+
+
+
+
+
+
+
