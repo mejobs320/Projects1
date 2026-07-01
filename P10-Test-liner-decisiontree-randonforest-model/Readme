@@ -1,0 +1,6 @@
+Test few model and train them with data (linear regressions, decision tree and random forest models)
+1) test with liner data to check with model win from linear regressions, decision tree and random forest
+2) Then test with non linear data to check which model wins out of 3
+3) we can also give input of property area, bedrooms and age and it will predict property price
+
+create webui and show result using streamlit
